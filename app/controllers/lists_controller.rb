@@ -10,6 +10,7 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @products = Product.where(list_id: params[:id])
   end
 
   # GET /lists/new
@@ -54,6 +55,7 @@ class ListsController < ApplicationController
   # DELETE /lists/1
   # DELETE /lists/1.json
   def destroy
+
     @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }

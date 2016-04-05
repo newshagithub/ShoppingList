@@ -22,11 +22,14 @@ ActiveRecord::Schema.define(version: 20160403025555) do
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
+    t.integer  "list_id"
     t.text     "description"
-    t.string   "quanity"
+    t.string   "quantity"
     t.decimal  "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "products", ["list_id"], name: "index_products_on_list_id"
 
 end
