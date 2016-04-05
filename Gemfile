@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
-
-
+# Use twitter bootstrap
+gem 'twitter-bootstrap-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
-gem 'twitter-bootstrap-rails'
-gem 'therubyracer'
 gem 'sqlite3'
 gem 'pg'
 # Use SCSS for stylesheets
